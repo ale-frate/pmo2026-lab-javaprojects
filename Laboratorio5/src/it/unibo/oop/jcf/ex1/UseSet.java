@@ -1,6 +1,8 @@
 package it.unibo.oop.jcf.ex1;
 
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  * Example class using {@link Set}.
@@ -16,7 +18,21 @@ public final class UseSet {
      *            ignored
      */
     public static void main(final String[] args) {
-        /*
+        
+    	SortedSet<String> t = new TreeSet<>();
+    	for(int i=1; i<=20 ;i++) {
+    		t.add(""+i);
+    	}
+    	System.out.println(t);
+    	
+    	for(int i=1; i<=t.size() ;i++) {
+    		if(i % 3 == 0) {
+    			t.remove(""+i);
+    		}
+    	}
+    	System.out.println(t);
+  
+    	/*
          * Considering the content of "UseCollection, write a program which, in
          * order:
          * 
