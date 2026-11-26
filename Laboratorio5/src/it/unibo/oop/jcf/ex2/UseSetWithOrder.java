@@ -1,11 +1,15 @@
 package it.unibo.oop.jcf.ex2;
 
+import java.util.SortedSet;
+import java.util.TreeSet;
+
 /**
  * 
  */
 public final class UseSetWithOrder {
 
-    private UseSetWithOrder() {
+    
+	private UseSetWithOrder() {
     }
 
     /**
@@ -24,5 +28,11 @@ public final class UseSetWithOrder {
          * 
          * 3) Prints the set, which must be ordered
          */
+    	SortedSet<String> t = new TreeSet<>(new StringComparator());
+    	
+    	for(int i = 0; i < 100; i++) {
+    		t.add(""+Math.random());
+    	}
+    	System.out.println(t);
     }
 }
